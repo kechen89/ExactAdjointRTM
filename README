@@ -1,0 +1,56 @@
+================================================================================
+
+	This directory contains all the programs, compiling rules,
+	and scripts necessary to reproduce all the figures appearing
+	in the GEOPHYSICS paper:
+
+        An exact adjoint operation pair in time extrapolation and
+        its application in least-squares reverse-time migration
+
+        by Jun Ji. DOI: 10.1190/1.3173894.
+
+	This directory contains 3 sub-directories:
+
+	./Src --> SEPlib program source files and compiling rules (makefile)
+	./Bin --> Executable files (after compilation)
+	./Fig --> Figure scripts and makefile
+
+================================================================================
+
+  Note some source files within this heirarchy are copyrighted.
+ 
+  Copyright (c) 2009 by the Society of Exploration Geophysicists.
+  For more information, go to http://software.seg.org/2009/0003 .
+  You must read and accept usage terms at:
+  http://software.seg.org/disclaimer.txt before use.
+ 
+================================================================================
+
+  1) Prerequisites 
+
+	For program compilation, you need to have 
+	Intel Fortran Compiler for Linux "ifort",
+        SEPLIB (6.3.12) and Madagascar (0.9.6) installed on your system.
+
+  2) Recompilation
+
+	To recompile all programs, go to "./Src" directory and run "make"
+	As prerequisites, you need to have 
+	Intel Fortran Compiler for Linux "ifort" and 
+        the SEPLIB (seplib-6.3.12) installed in your system.
+
+	# cd Src
+	# make
+
+  3) Reproduce all figures 
+	
+      	To reproduce all figures presented in the paper,
+	go to "./Fig" directory and run "make"
+
+	# cd ./Fig
+        # make
+        # tube *.v
+
+  4) Clean-up whole directory
+
+	# make clean

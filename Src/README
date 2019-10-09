@@ -1,0 +1,48 @@
+================================================================================
+
+	This directory contains the program source code necessary to
+	reproduce all the results in the GEOPHYSICS paper:
+
+        An exact adjoint operation pair in time extrapolation and
+        its application in least-squares reverse-time migration
+
+        by Jun Ji. DOI: 10.1190/1.3173894.
+
+================================================================================
+
+  1) Prerequisites 
+
+	You need to have Intel Fortran Compiler for Linux "ifort" and 
+        SEPLIB (seplib-6.3.12) installed on your system.
+
+  2) Fix the local directory structure of SEPLIB in makefile
+
+	Currently the SEPLIB directories are defined as follows 
+
+		SEPLIBDIR = /usr/local/SEP/lib
+		SEPBINDIR = /usr/local/SEP/bin
+		SEPINCDIR = /usr/local/SEP/include
+
+	If your system is different, you will need to change these.
+
+  3) run make
+	To compile all programs required to make all figures in the paper.
+
+        # make
+
+  4) Dot-product test 
+
+	To run dot-product test for the 1D Reverse-time Migration program
+
+	# make dot1d
+
+	To run dot-product test for the 2D Reverse-time Migration program
+
+	# make dot2d
+
+  5) Clean-up the directory 
+
+	To clean up the directory by removing all the intermediate files
+        generated during compilation.
+
+	# make clean
